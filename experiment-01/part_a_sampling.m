@@ -4,8 +4,7 @@ clear; clc; close all;
 %% Sampling and Reconstruct using different sampling rates 
 
 sample_rates = [20, 50, 100];     % Sampling rates
-total_plot = length(sample_rates)*3;
-plot_no = 1;
+fig_count = 0;
 
 for i = sample_rates
     % Defining parameters
@@ -26,6 +25,8 @@ for i = sample_rates
     recon_signal = interp1(td, des_signal,tr); % reconstructed signals
     
     % plotting of continuous and sampled signal
+    fig_count = fig_count + 1;
+    figure(fig_count)
     % for continuous
     subplot(3,1,1);
     plot(tc, cont_signal)
@@ -40,6 +41,7 @@ for i = sample_rates
     subplot(3,1,3);
     plot(tr, recon_signal);
     title("Reconstructed Signal from the sampleds signal of " + Fs +"Hz")
+    
 end
 
 
