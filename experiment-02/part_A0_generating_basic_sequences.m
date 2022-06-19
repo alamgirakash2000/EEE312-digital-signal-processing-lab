@@ -1,12 +1,17 @@
+%% Generating sequences
 clc; clear; close all;
-format compact;
 
-%% Generating Impulse sequence
-n0 = -2;                % Lag
-n = -3:3;               % generating sequence
-x1 = [(n-n0)==0];       % using logical argument
-subplot(211); stem(n, x1,"filled"); title("Impulse Sequence");
+x = -3:3;
+lag = -1;
 
-%% Generating unit step sequence
-x2 = [(n-n0)>=0];
-subplot(212); stem(n, x2,"filled"); title("Unit step Sequence");
+% Impulse sequence
+impulseSequence = (x - lag) ==0;
+subplot(311); stem(x, impulseSequence); title("Impulse Sequence")
+
+% Unit step sequences
+unitStep = (x-lag) >=0;
+subplot(312); stem(x, unitStep); title("Unit Step Sequence")
+
+% Ramp sequence
+ramp = zeros(1, length(x));
+ramp((x-lag)>=0] = (x -2);

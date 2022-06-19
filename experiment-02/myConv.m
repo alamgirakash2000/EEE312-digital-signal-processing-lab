@@ -2,8 +2,8 @@ clc; clear; close all;
 format compact;
 
 % Defining signals
-x1 = [4 2 6 1 8 5];      % signal 01
-x2 = [3 8 -5 -6 9 6 7];        % signal 02
+x1 = [2 0 1 2 1];            % signal 01
+x2 = [3 2 1];        % signal 02
 
 % Doing convolution
 result_builtIn = conv (x1 ,x2)

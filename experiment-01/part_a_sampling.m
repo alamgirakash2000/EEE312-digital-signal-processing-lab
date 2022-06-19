@@ -41,7 +41,6 @@ for i = sample_rates
     subplot(3,1,3);
     plot(tr, recon_signal);
     title("Reconstructed Signal from the sampleds signal of " + Fs +"Hz")
-    
 end
 
 

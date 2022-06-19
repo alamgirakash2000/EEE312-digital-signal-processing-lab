@@ -20,7 +20,7 @@ xlabel ("n"); ylabel ("x"); grid on;
 
 
 % Defining the function to finding odd and even part
-function [odd , n_odd , even , n_even ] = odd_even_part (x, n)
+function [odd , n_odd , even , n_even ] = odd_even_part(x, n)
 [n_fold , x_fold ] = sigfold (x,n);
 [n_even , even ] = signalAddition(x/2, n, x_fold /2, n_fold );
 [n_odd , odd] = signalAddition(x/2, n, -x_fold /2, n_fold );

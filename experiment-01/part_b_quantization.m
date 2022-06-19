@@ -15,7 +15,7 @@ normalizedSignal = samp_signal / (max(samp_signal)- min(samp_signal)); % Normali
 % Determining number of level
 nbits = [3,4,6];
 fig_count = 0;
-SQNR_list =[]
+SQNR_list =[];
 
 for bit = nbits
     nLevel = 2^bit -1 ;                                             % number of level

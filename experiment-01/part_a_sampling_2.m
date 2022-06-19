@@ -1,5 +1,5 @@
 %% Sampling and reconstruction of the signal -
-%% y = sin(2*pi*10*t) + sin(2*pi*50*t) + sin(2*pi*100*t)
+%%y = sin(2*pi*10*t) + sin(2*pi*50*t) + sin(2*pi*100*t)
 
 clear; clc; close all;
 
