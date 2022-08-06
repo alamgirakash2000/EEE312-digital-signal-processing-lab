@@ -19,7 +19,7 @@ SQNR_list =[];
 
 for bit = nbits
     nLevel = 2^bit -1 ;                                             % number of level
-    qLevels = linspace(min(samp_signal),max(samp_signal),nLevel) ;  % Quantized level
+    qLevels = linspace(min(samp_signal),max(samp_signal),nLevel);   % Quantized level
     % Scale the signal to have the same magnitude as the number of bits
     scalingFactor = normalizedSignal * (nLevel - 1);                % scalling factor for the quantized sequence
     quant_signal = round(scalingFactor)*(max(samp_signal) - min(samp_signal))/(nLevel-1) ;

@@ -1,4 +1,4 @@
-%% Designing an Up-sampler
+%%Designing an Up-sampler
 clc; clear; close all;
 format compact;
 

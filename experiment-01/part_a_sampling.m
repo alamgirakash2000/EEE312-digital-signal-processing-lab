@@ -19,6 +19,8 @@ for i = sample_rates
     td = 0: Ts :5/F;                    % Descrete time axis
     sample_number = length(td);         % number of samples
     des_signal = sin(2*pi*F*td + 0);    % Descreate signal
+    pp = sampledToQuantize(des_signal, 5);
+    
     
     % Reconstructing
     tr = 0: 1e-4 : 5/F;                        % time axis for reconstruction

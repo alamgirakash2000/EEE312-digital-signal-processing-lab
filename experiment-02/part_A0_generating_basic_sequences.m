@@ -14,4 +14,4 @@ subplot(312); stem(x, unitStep); title("Unit Step Sequence")
 
 % Ramp sequence
 ramp = zeros(1, length(x));
-ramp((x-lag)>=0] = (x -2);
+ramp((x-lag)>=0) = (x -2);

@@ -12,9 +12,6 @@ y2 = y1;
 y1(1:length(x2))= x2;  
 y2(length(x2):(length(x2)+length(x1)-1)) = x1;
 
-
-
-
 % Calculating Cross Corelation
 for i=1:n
     yf(i) = sum(rightShift(y1,i).*y2);
